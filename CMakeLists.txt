@@ -14,14 +14,35 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 
 catkin_package()
 
-add_executable(bb_controller_feedfwd src/Controller.cpp)
-target_link_libraries(bb_controller_feedfwd ${catkin_LIBRARIES})
-add_dependencies(bb_controller_feedfwd bb_controller_gencpp )
 
-add_executable(Controller10.4. src/Controller10.4..cpp)
-target_link_libraries(Controller10.4. ${catkin_LIBRARIES})
-add_dependencies(Controller10.4. bb_controller_gencpp )
-# add_executable(io_node src/IONode.cpp)
-# target_link_libraries(io_node ${catkin_LIBRARIES})
-# add_dependencies(io_node bb_state_gencpp)
+add_executable(himmelhilf src/hilfe.cpp)
+target_link_libraries(himmelhilf ${catkin_LIBRARIES})
+add_dependencies(himmelhilf bb_controller_gencpp )
+
+add_executable(controlleraktuell src/tryeraktuell.cpp)
+target_link_libraries(controlleraktuell ${catkin_LIBRARIES})
+add_dependencies(controlleraktuell bb_controller_gencpp )
+
+add_executable(ControllerToStartPID src/ControllerToStartPID.cpp)
+target_link_libraries(ControllerToStartPID ${catkin_LIBRARIES})
+add_dependencies(ControllerToStartPID bb_controller_gencpp )
+
+add_executable(ControllerBase src/ControllerBase.cpp)
+target_link_libraries(ControllerBase ${catkin_LIBRARIES})
+add_dependencies(ControllerBase bb_controller_gencpp )
+
+add_executable(Controller1PID src/Controller1PID.cpp)
+target_link_libraries(Controller1PID ${catkin_LIBRARIES})
+add_dependencies(Controller1PID bb_controller_gencpp )
+
+
+add_executable(controllermickey src/controllermickey.cpp)
+target_link_libraries(controllermickey ${catkin_LIBRARIES})
+add_dependencies(controllermickey bb_controller_gencpp )
+
+#add_executable(Visualizator src/Visualizator.cpp)
+#target_link_libraries(Visualizator ${catkin_LIBRARIES})
+#add_dependencies(Visualizator bb_controller_gencpp )
+
+
 
